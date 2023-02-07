@@ -1,7 +1,6 @@
 :- initialization run_tests(lists).
 
 :- op(600, xfx, parent).
-
 :- op(500, fy, notus).
 
 notus(bob).
