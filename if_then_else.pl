@@ -3,7 +3,8 @@
 :- op(900, fx, if).
 :- op(800, xfx, then).
 
-if(A) :- A.
+% syntax sugar
+if(then(C,A)) :- then(C,A).
 
 then(C, A) :- C, A.
 
