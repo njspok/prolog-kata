@@ -1,7 +1,7 @@
 :- initialization run_tests(lists).
 
-:- op(1100, xfy, then).
-:- op(1000, fx, if).
+:- op(900, fx, if).
+:- op(800, xfx, then).
 
 if(A) :- A.
 
