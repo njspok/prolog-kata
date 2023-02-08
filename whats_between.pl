@@ -1,3 +1,7 @@
+%whats_between(A, A, [A]).
+%whats_between(A, B, [A|Rest])
+%  :- Next is A + 1, whats_between(Next, B, Rest).
+
 whats_between(B, B, [B]).
 whats_between(A, B, [A,B]) :- 1 is B - A.
 whats_between(A, B, P) :-
