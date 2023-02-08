@@ -1,3 +1,3 @@
 
-man(oleg).
 man(_) :- !.
+man(oleg).
