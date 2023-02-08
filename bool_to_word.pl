@@ -1,4 +1,3 @@
-
 bool_to_word(true, 'Yes').
 bool_to_word(false, 'No').
 
