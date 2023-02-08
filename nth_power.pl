@@ -5,6 +5,9 @@ index(Array, N, Result) :-
     Result is E**N
 .
 
+%index(Array, N, Result) :-
+%  nth0(N, Array, E) -> Result is E **N; Result is -1.
+
 :- initialization run_tests(index_tests).
 :- begin_tests(index_tests).
 
