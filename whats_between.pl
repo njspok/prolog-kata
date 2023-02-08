@@ -1,14 +1,23 @@
-%whats_between(A, A, [A]).
-%whats_between(A, B, [A|Rest])
-%  :- Next is A + 1, whats_between(Next, B, Rest).
+%whats_between(X, X, [X]).
+%whats_between(A, B, [A | X]) :-
+%    Next is A+1,
+%    Next =< B,
+%    whats_between(Next, B, X).
 
-whats_between(B, B, [B]).
-whats_between(A, B, [A,B]) :- 1 is B - A.
-whats_between(A, B, P) :-
-    B - A > 1,
-    N is A + 1,
-    whats_between(N, B, P1),
-    P = [A | P1].
+whats_between(X, X, [X]).
+whats_between(A, B, R) :-
+    Next is A+1,
+    Next =< B,
+    whats_between(Next, B, X),
+    R = [A | X].
+
+%whats_between(B, B, [B]).
+%whats_between(A, B, [A,B]) :- 1 is B - A.
+%whats_between(A, B, P) :-
+%    B - A > 1,
+%    N is A + 1,
+%    whats_between(N, B, P1),
+%    P = [A | P1].
 
 :- initialization run_tests(kata).
 :- begin_tests(kata).
